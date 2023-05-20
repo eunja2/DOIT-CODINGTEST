@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q039_B1747_소수팰린드롬최솟값 {
+public class Q039_B1747_소수팰린드롬수최솟값 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
