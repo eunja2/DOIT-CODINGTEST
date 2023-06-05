@@ -31,7 +31,7 @@ public class Q073_B11505_구간곱구하기 {
 
         for(int i=0;i<M+K;i++){
             st =  new StringTokenizer(br.readLine());
-            long a = Integer.parseInt(st.nextToken());
+            long a = Long.parseLong(st.nextToken());
             int s = Integer.parseInt(st.nextToken());
             long e = Long.parseLong(st.nextToken());
             if(a==1){ // s번째 수를 e로 변경
@@ -64,9 +64,9 @@ public class Q073_B11505_구간곱구하기 {
     }
     private static void changeVal(int idx, long val){
         tree[idx] = val;
-        while(idx>1){
+        while(idx>1){ // 현재 노드의 양쪽 자식 노드 찾아 곱함
             idx /= 2;
-            tree[idx] = tree[idx*2] % MOD + tree[idx*2+1] % MOD;
+            tree[idx] = tree[idx*2] % MOD * tree[idx*2+1] % MOD;
         }
     }
     private static void setTree(int i){
